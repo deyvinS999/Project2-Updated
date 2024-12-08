@@ -48,7 +48,7 @@ struct Graph {
         adjList[from].push_back(to);
     }
 
-    // Display connections from a given node (no BFS/DFS)
+    // Display connections from a given node
     void displayConnectionsFrom(int start) const {
         cout << "Connections from space " << start << ": ";
         auto it = adjList.find(start);
@@ -63,7 +63,7 @@ struct Graph {
     }
 
     void displayGraph() const {
-        cout << "\n--- Board Graph Structure (No BFS/DFS) ---\n";
+        cout << "\n--- Board Graph Structure\n";
         for (const auto& [node, neighbors] : adjList) {
             cout << "Space " << node << " connects to: ";
             for (int neighbor : neighbors) {
